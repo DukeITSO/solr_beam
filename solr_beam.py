@@ -28,7 +28,7 @@ def scan_host(ip, port):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('-t', metavar='192.0.2.1 / targets.txt', help='host to scan, or line separated file', required=True)
+    parser.add_argument('-t', metavar='192.0.2.1 / targets.txt', help='host or cidr to scan, or line separated file', required=True)
     parser.add_argument('-p', metavar='8983', default=8983, help='port(s) to scan, comma separated', required=False)
     parser.add_argument('-v', action='store_true', help='verbose, show each scan item', required=False)
     args = parser.parse_args()
