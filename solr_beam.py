@@ -12,13 +12,13 @@ def scan_host(ip, port):
     r = None
     timeout = 0.5
     try:
-        url = 'http://{0}:{1}/solr/#/~cores/'.format(ip, port)
-        r = requests.get(url, timeout=timeout)
+        r = requests.get('http://{0}:{1}/solr/'.format(ip, port), timeout=timeout)
+        url = 'http://{0}:{1}/solr/'.format(ip, port)
     except Exception:
         pass
     try:
-        url = 'https://{0}:{1}/solr/#/~cores/'.format(ip, port)
-        r = requests.get(url, timeout=timeout)
+        r = requests.get('https://{0}:{1}/solr/'.format(ip, port), timeout=timeout)
+        url = 'https://{0}:{1}/solr/'.format(ip, port)
     except Exception:
         pass
 
